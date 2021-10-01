@@ -12,7 +12,13 @@ steps:
     name: "Sleep Build"
     command: |
       version=2
-      sleep 480
+      END=8
+      for i in $(seq 1 $END)
+      do
+      echo $i
+      date
+      sleep 60
+      done
       date > sleep.txt
       
 outputArtifacts:
